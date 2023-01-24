@@ -88,7 +88,7 @@ a.nav-link{
 }
 
 
-.top-btn button{
+.top-btn a{
     font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 500;
@@ -104,7 +104,7 @@ a.nav-link{
     border-radius: 5px;
     transition: 0.3s;
 }
-.top-btn button:hover{
+.top-btn a:hover{
     background-color: #d89a09;
     color:#fff;
 }

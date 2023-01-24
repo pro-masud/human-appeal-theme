@@ -8,7 +8,7 @@
  *
  * @package human_appeal
  */
-
+    global $redux_demo;
 ?>
 
 	  <!-- footer section part start now -->
@@ -19,7 +19,7 @@
                     <div class="col-lg-3">
                         <div class="widget-item">
                             <div class="footer-img">
-                               <a href="#"> <img src="<?php echo get_template_directory_uri(); ?> ./access/images/logo/flogo.png" alt="flogo"></a>
+                               <a href="#"> <img src="<?php echo $redux_demo['footer_logo']['url']; ?>" alt="flogo"></a>
                             </div>
                         </div>
                     </div>
@@ -110,14 +110,22 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="footer-copy-right-text">
-                            <p>© 2023 Human Appeal Bangladesh All right reserved</p>
+                            <?php if($redux_demo['footer_copy_right']): ?>
+                            <p><?php echo $redux_demo['footer_copy_right']; ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="footer-right-link">
-                            <a href="#">FAQ</a>
-                            <a href="#">HELP DESK</a>
-                            <a href="#">SUPPORT</a>            
+                            <?php if($redux_demo['footer_faq_link']) : ?>
+                            <a href="<?php echo esc_url($redux_demo['footer_faq_link']); ?>">FAQ</a>
+                            <?php endif; ?>
+                            <?php if($redux_demo['footer_help_link']) : ?>
+                            <a href="<?php echo esc_url($redux_demo['footer_help_link']); ?>">HELP DESK</a>
+                            <?php endif; ?>
+                            <?php if($redux_demo['footer_support_link']) : ?>
+                            <a href="<?php echo esc_url($redux_demo['footer_support_link']); ?>">SUPPORT</a>  
+                            <?php endif; ?>          
                         </div>
                     </div>
                 </div>

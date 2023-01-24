@@ -9,6 +9,8 @@
  * @package human_appeal
  */
 
+
+    global $redux_demo;
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,28 +28,40 @@
                 <div class="col-lg-6">
                     <div class="top-info">
                         <p>
-                            <span><i class="fa-solid fa-envelope"></i> : Hello@humanappealbd.org</span>
+                            <span><i class="fa-solid fa-envelope"></i> : <?php echo $redux_demo['header_email_number'];?></span>
                         </p>
                         <p>
-                            <span><i class="fa-solid fa-phone"></i> : Hello@humanappealbd.org</span>
+                            <span><i class="fa-solid fa-phone"></i> : <?php echo $redux_demo['head_phone_number'];?></span>
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="top-social">
                         <div class="social-link">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <?php if( $redux_demo['hfpl']): ?>
+                            <a href="<?php echo esc_url($redux_demo['hfpl']);?>"><i class="fa-brands fa-facebook-f"></i></a>
+                            <?php endif; ?>
+                             <?php if( $redux_demo['htl']): ?>
+                            <a href="<?php echo esc_url($redux_demo['htl']);?>"><i class="fa-brands fa-twitter"></i></a>
+                             <?php endif; ?>
+                             <?php if( $redux_demo['hisp']): ?>
+                            <a href="<?php echo esc_url($redux_demo['hisp']);?>"><i class="fa-brands fa-instagram"></i></a>
+                             <?php endif; ?>
+                             <?php if( $redux_demo['hlndin']): ?>
+                            <a href="<?php echo esc_url($redux_demo['hlndin']);?>"><i class="fa-brands fa-linkedin"></i></a>
+                             <?php endif; ?>
+                             <?php if( $redux_demo['hyou']): ?>
+                            <a href="<?php echo esc_url($redux_demo['hyou']);?>"><i class="fa-brands fa-youtube"></i></a>
+                             <?php endif; ?>
                         </div>
+                        <?php if( $redux_demo['hea_form_hide_show']): ?>
                         <div class="log_in">
                             <form>
                                 <button>Login</button>
                                 <button>Register</button>
                             </form>
                         </div>
+                    <?php endif; ?>
                     </div>
                 </div>
            </div>
@@ -57,7 +71,7 @@
     <!-- Main NavBar____BAR Start-->
     <nav  class="navbar navbar-expand-lg sticky-top navbar-light py-3">
        <div class="container">
-            <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?> ./access/images/logo/logo.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="<?php echo $redux_demo['header_logs']['url']; ?>" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" >
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -73,10 +87,11 @@
                     'active_class'		=> 'active',
                     'fallback_cb'		=> 'null_menu'
             	]) ?>
-
+                <?php if( $redux_demo['hea_donete'] ): ?>
                 <form class="form-inline top-btn  ms-auto">
-                    <button class="btn">Donete Now</button>
+                    <a href="<?php echo esc_url($redux_demo['hea_donete_links']); ?>">Donete Now</a>
                 </form>
+                <?php endif; ?>
             </div>
        </div>
     </nav>

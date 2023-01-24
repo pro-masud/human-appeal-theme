@@ -457,6 +457,43 @@ Redux::set_section(
 
 
 
+/* Footer sections all fields here now*/
+Redux::set_section(
+	$opt_name,
+	array(
+		'title'            => esc_html__( 'Custom CSS And JS', 'human-appeal' ),
+		'id'               => 'footer_menu',
+		'desc'    		   => esc_html__( 'Header Form Box Hide and Show', 'human-appeal' ),
+		'subsection'	   => true,
+		'fields'		   => [
+			[
+				'title'			=> __( 'FAQ', 'human-appeal' ),
+				'desc'			=> __( 'FAQ Link', 'human-appeal' ),
+				'id'			=> 'footer_faq_link',
+				'type'			=> 'text',
+				'default'		=> '#',
+			],
+			[
+				'title'			=> __( 'Help Desk', 'human-appeal' ),
+				'desc'			=> __( 'help desk Link', 'human-appeal' ),
+				'id'			=> 'footer_help_link',
+				'type'			=> 'text',
+				'default'		=> '#',
+			],
+			[
+				'title'			=> __( 'Support', 'human-appeal' ),
+				'desc'			=> __( 'support Link', 'human-appeal' ),
+				'id'			=> 'footer_support_link',
+				'type'			=> 'text',
+				'default'		=> '#',
+			]
+		]
+
+	)
+);
+
+
+
 // fields' => array(  
 //         array(
 //             'id'=>'webFonts',
