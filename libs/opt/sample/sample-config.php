@@ -462,7 +462,7 @@ Redux::set_section(
 	$opt_name,
 	array(
 		'title'            => esc_html__( 'Custom CSS And JS', 'human-appeal' ),
-		'id'               => 'footer_menu',
+		'id'               => 'css_js',
 		'desc'    		   => esc_html__( 'Header Form Box Hide and Show', 'human-appeal' ),
 		'subsection'	   => true,
 		'fields'		   => [
@@ -480,13 +480,6 @@ Redux::set_section(
 				'type'			=> 'text',
 				'default'		=> '#',
 			],
-			[
-				'title'			=> __( 'Support', 'human-appeal' ),
-				'desc'			=> __( 'support Link', 'human-appeal' ),
-				'id'			=> 'footer_support_link',
-				'type'			=> 'text',
-				'default'		=> '#',
-			]
 		]
 
 	)

@@ -1033,3 +1033,27 @@ textarea {
 a:visited{
 	color: #fff;
 }
+
+.widget-item h4 i{
+	margin-right: 7px !important;
+}
+
+.widget-item .pages-link{
+	color: #fff;
+}
+
+.widget-item .pages-link ul{
+	margin: 10px 0px 0px 9px ;
+}
+
+.widget-item .pages-link ul{
+	padding-left: 1rem;
+}
+
+.widget-item ul{
+	margin: 0px !important;
+}
+
+.footer-social-link {
+	margin-top: 25px !important;
+}

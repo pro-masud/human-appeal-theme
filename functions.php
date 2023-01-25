@@ -128,13 +128,70 @@ add_action( 'after_setup_theme', 'human_appeal_content_width', 0 );
 function human_appeal_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'human-appeal' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Footer One', 'human-appeal' ),
+			'id'            => 'footer-1',
 			'description'   => esc_html__( 'Add widgets here.', 'human-appeal' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div class="widget-item">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4><i class="fa-solid fa-phone"></i>',
+			'after_title'   => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Two', 'human-appeal' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Add widgets here.', 'human-appeal' ),
+			'before_widget' => '<div class="widget-item">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4><i class="fa-solid fa-envelope"></i>',
+			'after_title'   => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Three', 'human-appeal' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add widgets here.', 'human-appeal' ),
+			'before_widget' => '<div class="widget-item">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4><i class="fa-solid fa-location-pin"></i>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer One Sub', 'human-appeal' ),
+			'id'            => 'footer-sub-1',
+			'description'   => esc_html__( 'Add widgets here.', 'human-appeal' ),
+			'before_widget' => '<div class="widget-item"><div class="pages-link">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Foote Two Sub', 'human-appeal' ),
+			'id'            => 'footer-sub-2',
+			'description'   => esc_html__( 'Add widgets here.', 'human-appeal' ),
+			'before_widget' => '<div class="widget-item"><div class="pages-link">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Three Sub', 'human-appeal' ),
+			'id'            => 'footer-sub-3',
+			'description'   => esc_html__( 'Add widgets here.', 'human-appeal' ),
+			'before_widget' => '<div class="widget-item"><ul class="pages-link">',
+			'after_widget'  => '</ul></div>',
+			'before_title'  => '',
+			'after_title'   => '',
 		)
 	);
 }
@@ -209,7 +266,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	add_filter('nav_menu_css_class', 'add_class_li', 10, 3);
 
 
+
+
+
+
 	/* Redux framework include here */
 	include"libs/opt/redux-core/framework.php";
 	include"libs/opt/sample/sample-config.php";
+
+
+
+	/* footer widgets link here now*/
+	include_once"libs/widgets/human_appela_social.php";
+	include_once"libs/widgets/human_appela_button.php";
 
