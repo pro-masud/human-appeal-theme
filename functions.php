@@ -280,3 +280,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include_once"libs/widgets/human_appela_social.php";
 	include_once"libs/widgets/human_appela_button.php";
 
+	/* TGM Framework includeing now */
+	include_once"libs/tgm/example.php";
+
+
+
+	/* shortcode include now*/
+	include_once"libs/shortcode/comet_pro_expertise.php";
+	include_once"libs/shortcode/examp.php";
+

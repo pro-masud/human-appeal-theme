@@ -25,7 +25,7 @@
     <nav class="top-nav">
         <div class="container">
            <div class="row justify-content-between">
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <div class="top-info">
                         <p>
                             <span><i class="fa-solid fa-envelope"></i> : <?php echo $redux_demo['header_email_number'];?></span>
@@ -35,7 +35,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="top-social">
                         <div class="social-link">
                             <?php if( $redux_demo['hfpl']): ?>
