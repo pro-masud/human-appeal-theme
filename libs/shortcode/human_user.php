@@ -7,11 +7,11 @@ add_shortcode( 'human_user', 'human_user' );
 function human_user( $atts ) {
          extract( 
            shortcode_atts([
-              'user_name'       => 'Emergency box',
-              'user_job'        => 'Emergency box',
-              'descrip'         => '#',
-              'user_btn_text'   => 'Donete Now',
-              'user_btn_url'    => '#',
+              'user_name'       => '',
+              'user_job'        => '',
+              'descrip'         => '',
+              'user_btn_text'   => '',
+              'user_btn_url'    => '',
               'user_image'      => '',
 
          ],$atts ) );

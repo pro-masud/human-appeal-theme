@@ -7,12 +7,12 @@ add_shortcode( 'human_emergency_box', 'human_emergency_box' );
 function human_emergency_box( $atts ) {
          extract( 
            shortcode_atts([
-              'box_emergency_text' => 'Emergency box',
-              'box_emergency_sub_text' => 'Emergency box',
-              'btn_text_one'    => 'Campaign details',
-              'btn_url_one'     => '#',
-              'btn_text_two'    => 'Donete Now',
-              'btn_url_two'     => '#',
+              'box_emergency_text' => '',
+              'box_emergency_sub_text' => '',
+              'btn_text_one'    => '',
+              'btn_url_one'     => '',
+              'btn_text_two'    => '',
+              'btn_url_two'     => '',
 
          ],$atts ) );
   

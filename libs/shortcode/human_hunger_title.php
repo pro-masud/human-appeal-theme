@@ -7,7 +7,7 @@ add_shortcode( 'human-hunger-title', 'human_title' );
 function human_title( $atts ) {
          extract( 
            shortcode_atts([
-              'title' => 'Title',
+              'title' => '',
 
          ],$atts ) );
   

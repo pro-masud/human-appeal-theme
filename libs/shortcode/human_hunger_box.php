@@ -7,11 +7,11 @@ add_shortcode( 'human-hunger-box', 'human_hunger_box' );
 function human_hunger_box( $atts ) {
          extract( 
            shortcode_atts([
-              'box_header_text' => 'i am masud rana',
-              'btn_text_one'    => 'Campaign details',
-              'btn_url_one'     => '#',
-              'btn_text_two'    => 'Donete Now',
-              'btn_url_two'     => '#',
+              'box_header_text' => '',
+              'btn_text_one'    => '',
+              'btn_url_one'     => '',
+              'btn_text_two'    => '',
+              'btn_url_two'     => '',
 
          ],$atts ) );
   

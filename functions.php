@@ -291,4 +291,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include_once"libs/shortcode/human_emergency_box.php";
 	include_once"libs/shortcode/human_user.php";
 	include_once"libs/shortcode/human_right.php";
+	include_once"libs/shortcode/human_project_title.php";
 
