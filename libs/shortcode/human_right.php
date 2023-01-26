@@ -14,8 +14,8 @@ function human_project_title( $atts ) {
   
 
  return "<div class='our_title'>
-            <h2>Our Projects {$heading}</h2>
-            <p>We implemented a number of major development activities including human welfare and other specialized programs, specially designed for the deprived people. Besides we are operating in Countrywide, covering a population of over more than 1 million people transforming the quality of their lives with positive impact.{$sub_title}</p>
+            <h2>{$heading}</h2>
+            <p>{$sub_title}</p>
         </div>
  		";
 }
@@ -39,7 +39,7 @@ function human_project_title_vc() {
             ],
             [
               "param_name" => "sub_title",
-              "type" => "textfield",
+              "type" => "textarea",
               "heading" => __( "Project Sub Title", "human-appeal" ),
               "description" => __( "Sub Title", "human-appeal" )
             ]
