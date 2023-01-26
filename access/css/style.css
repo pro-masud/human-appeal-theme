@@ -140,7 +140,7 @@ a.nav-link{
 .hunger_btn{
     margin-top: 70px;
 }
-.hunger_btn button:first-child{
+.hunger_btn a:first-child{
     font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 400;
@@ -150,7 +150,7 @@ a.nav-link{
     background: #0066A3;
     border-radius: 5px;
 }
-.hunger_btn button:last-child{
+.hunger_btn a:last-child{
     font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 400;
@@ -213,7 +213,7 @@ a.nav-link{
     align-items: center;
     justify-content: center;
 }
-.energency_btn button{
+.energency_btn a{
     background: #F5B114;
     border-radius: 5px;
     font-family: 'Roboto';

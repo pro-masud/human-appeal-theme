@@ -1061,3 +1061,8 @@ a:visited{
 .top-info{
 	margin-top: 5px;
 }
+
+main{
+	max-width: 1330px;
+	margin: 0 auto;
+}

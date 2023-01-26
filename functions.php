@@ -286,6 +286,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 	/* shortcode include now*/
-	include_once"libs/shortcode/comet_pro_expertise.php";
-	include_once"libs/shortcode/examp.php";
+	include_once"libs/shortcode/human_hunger_box.php";
+	include_once"libs/shortcode/human_hunger_title.php";
+	include_once"libs/shortcode/human_emergency_box.php";
+	include_once"libs/shortcode/human_user.php";
+	include_once"libs/shortcode/human_right.php";
 

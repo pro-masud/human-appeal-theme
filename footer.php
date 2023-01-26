@@ -24,13 +24,25 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <?php dynamic_sidebar('footer-1'); ?>
+                        <?php 
+                            if(is_active_sidebar('footer-1')){
+                                dynamic_sidebar('footer-1');
+                            }
+                         ?>
                     </div>
                     <div class="col-lg-3">
-                        <?php dynamic_sidebar('footer-2'); ?>
+                        <?php 
+                            if(is_active_sidebar('footer-2')){
+                                dynamic_sidebar('footer-2');
+                            }
+                         ?>
                     </div>
                     <div class="col-lg-3">
-                        <?php dynamic_sidebar('footer-3'); ?>
+                        <?php 
+                            if(is_active_sidebar('footer-3')){
+                                dynamic_sidebar('footer-3');
+                            }
+                         ?>
                     </div>
                 </div>
                 <hr>
@@ -43,13 +55,25 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                          <?php dynamic_sidebar('footer-sub-1'); ?>
+                          <?php 
+                            if(is_active_sidebar('footer-sub-1')){
+                                dynamic_sidebar('footer-sub-1');
+                            }
+                         ?>
                     </div>
                     <div class="col-lg-3">
-                         <?php dynamic_sidebar('footer-sub-2'); ?>
+                         <?php 
+                            if(is_active_sidebar('footer-sub-2')){
+                                dynamic_sidebar('footer-sub-2');
+                            }
+                         ?>
                     </div>
                     <div class="col-lg-3">
-                         <?php dynamic_sidebar('footer-sub-3'); ?>
+                         <?php 
+                            if(is_active_sidebar('footer-sub-3')){
+                                dynamic_sidebar('footer-sub-3');
+                            }
+                         ?>
                     </div>
                 </div>
             </div>
