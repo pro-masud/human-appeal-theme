@@ -35,7 +35,7 @@ function human_emergency_box_vc() {
  vc_map([
   "name" => __( "Human Emergen Box", "human-appeal" ),
   "base" => "human_emergency_box",
-  "class" => "",
+  "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[
             [

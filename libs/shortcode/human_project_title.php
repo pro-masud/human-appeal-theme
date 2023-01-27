@@ -32,7 +32,7 @@ function human_user_right_vc() {
  vc_map([
   "name" => __( "User Right", "human-appeal" ),
   "base" => "human_user_right",
-  "class" => "",
+  "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[
             [

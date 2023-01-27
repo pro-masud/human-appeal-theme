@@ -2,9 +2,9 @@
 /* human appeal first shorcode create heere now*/
 
 /* */
-add_shortcode( 'human_project_items', 'human_project_items' );
+add_shortcode( 'human_donete_support', 'human_donete_support' );
 
-function human_project_items( $atts ) {
+function human_donete_support( $atts ) {
          extract( 
            shortcode_atts([
               'project_title'                       => '',
@@ -22,62 +22,53 @@ function human_project_items( $atts ) {
          ],$atts ) );
 
 
-         $project_img_one = wp_get_attachment_url($project_img);
-         $project_models_img = wp_get_attachment_url($project_model_img);
   
 
- return "<div class='modal_item'>
-              <div class='our_pro' style='background-color: {$project_bg};'>
-                  <button type='hidden' class='btn' data-bs-toggle='modal' data-bs-target='#ourpro'>
-                      <img src='{$project_img_one}' alt='pro1'>
-                      <p>{$project_title}</p>
-                      <a href='#''><i class='fa-solid fa-arrow-right-long'></i></a>
-                  </button>
-              </div>
-              <div class='modal fade ourproject_model' id='ourpro'>
-                  <div class='modal-dialog '>
-                      <div class='modal-content '>
-                          <div class='modal-header'>
-                              <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
-                          </div>
-                          <div class='modal-body modal_cont'>
-                              <div class='row ourpro_modal'>
-                                  <div class='col-lg-6'>
-                                     <div class='model_left'>
-                                          <img src='{$project_models_img}' alt=''>
-                                     </div>
-                                  </div>
-                                  <div class='col-lg-6'>
-                                      <div class='model_right'>
-                                          <h2>Build a Masjid and build your palace in Jannah!{$project_model_title}</h2>
-                                          <p>A dedicated place to practice and share your faith is so important but within Muslim communities in the developing world, they don’t always have this option. A mosque is the heart of any Islamic community, and you can gift this house of Allah (SWT) to those who have no place to congregate and pray with a simple act of Sadaqah Jariyah. .
-                                              Human Appeal (Bangladesh) has actively engaged in faith based program. <br> <br> As Bangladesh is a Muslim majority country. We have already built 310+ masjid across the country in previous 12 years  understanding the significance and studying feasibility whilst maintaning the standard prescribed from the donors 
-                                              Uplift a community with your Sadaqah today, build a masjid with us!{$project_model_desc}
-                                          </p>
-                                          <div class='model_btn'>
-                                              <a class='btn' href='{$project_model_button_url_one}'>DONATE{$project_model_button_text_one}</a>
-                                              <a class='btn' href='{$project_model_button_url_two}'>MORE{$project_model_button_text_two}</a>
-                                              <a class='btn' href='{$project_model_you_link}'><i class='fa-solid fa-play'></i></a>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+ return "<div class='watch' style='background-image: url(\"./images/others/wbg.png\")'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col'>
+                        <div class='watching>
+                            <h3>watch</h3>
+                            <a href=''><img src='./images/others/w.png' alt='watch'></a>
+                        </div>
+                        <div class='TopwatchFe'>
+                            <div class='row'>
+                                <div class='col-sm-4'>
+                                    <div class='TopwatchFe_item'>
+                                        <h3>DONATE</h3>
+                                        <p>Support our work</p>
+                                    </div>
+                                </div>
+                                <div class='col-sm-4'>
+                                    <div class='TopwatchFe_item'>
+                                        <h3>DONATE</h3>
+                                        <p>Support our work</p>
+                                    </div>
+                                </div>
+                                <div class='col-sm-4'>
+                                    <div class='TopwatchFe_item'>
+                                        <h3>DONATE</h3>
+                                        <p>Support our work</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
  		";
 }
 ?>
 
 <?php
-add_action( 'vc_before_init', 'human_project_items_vc' );
+add_action( 'vc_before_init', 'human_donete_support_vc' );
 
-function human_project_items_vc() {
+function human_donete_support_vc() {
  vc_map([
   "name" => __( "Project Item", "human-appeal" ),
-  "base" => "human_project_items",
+  "base" => "human_donete_support",
   "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[

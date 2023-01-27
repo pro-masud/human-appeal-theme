@@ -33,7 +33,7 @@ function your_name_integrateWithVC() {
  vc_map([
   "name" => __( "Human Hunger Box", "human-appeal" ),
   "base" => "human-hunger-box",
-  "class" => "",
+   "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[
             [

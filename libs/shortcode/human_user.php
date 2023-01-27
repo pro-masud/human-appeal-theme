@@ -39,7 +39,7 @@ function human_users_vc() {
  vc_map([
   "name" => __( "Human User", "human-appeal" ),
   "base" => "human_user",
-  "class" => "",
+  "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[
             [

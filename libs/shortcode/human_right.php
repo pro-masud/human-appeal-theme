@@ -28,7 +28,7 @@ function human_project_title_vc() {
  vc_map([
   "name" => __( "Project Title", "human-appeal" ),
   "base" => "human_project_title",
-  "class" => "",
+  "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[
             [

@@ -26,7 +26,7 @@ function humanHungerTitle() {
  vc_map([
   "name" => __( "Title", "human-appeal" ),
   "base" => "human-hunger-title",
-  "class" => "",
+   "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[
             [
