@@ -293,4 +293,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include_once"libs/shortcode/human_right.php";
 	include_once"libs/shortcode/human_project_title.php";
 	include_once"libs/shortcode/human_project_items.php";
+	include_once"libs/shortcode/human_donete_support.php";
+	include_once"libs/shortcode/human_service.php";
 
