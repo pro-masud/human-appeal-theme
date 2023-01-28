@@ -7,17 +7,18 @@ add_shortcode( 'human_campaign_box', 'human_campaign_box' );
 function human_campaign_box( $atts ) {
          extract( 
            shortcode_atts([
-              'user_name'       => '',
-              'user_job'        => '',
-              'descrip'         => '',
-              'user_btn_text'   => '',
-              'user_btn_url'    => '',
+              'campaign_title'       => '',
+              'campaign_sub_title'        => '',
+              'campaign_sub_t_title'         => '',
+              'choose_campaign'   => '',
+              'choose_community'    => '',
               'user_image'      => '',
 
          ],$atts ) );
-  
-      /* user image include here now*/
-        $image = wp_get_attachment_url($user_image);
+
+
+
+
 
  return " <div class='campaign-box-left'>
               <p>We're Near to Our</p>
@@ -31,7 +32,6 @@ function human_campaign_box( $atts ) {
                       <option value='01'>01</option>
                       <option value='01'>01</option>
                   </select>
-                  
               </div>
               <div class='campaign_btn2'>
                   <select>
