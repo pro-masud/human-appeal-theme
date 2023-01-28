@@ -295,4 +295,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include_once"libs/shortcode/human_project_items.php";
 	include_once"libs/shortcode/human_donete_support.php";
 	include_once"libs/shortcode/human_service.php";
+	include_once"libs/shortcode/human_campaign_box.php";
 
