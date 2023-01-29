@@ -67,7 +67,7 @@ add_action( 'vc_before_init', 'human_donete_support_vc' );
 
 function human_donete_support_vc() {
  vc_map([
-  "name" => __( "Project Item", "human-appeal" ),
+  "name" => __( "Donete Supports Box", "human-appeal" ),
   "base" => "human_donete_support",
   "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
