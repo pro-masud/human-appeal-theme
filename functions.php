@@ -105,6 +105,7 @@ function human_appeal_setup() {
 	function null_menu(){
 		
 	}
+
 }
 add_action( 'after_setup_theme', 'human_appeal_setup' );
 
@@ -220,6 +221,28 @@ function human_appeal_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'human_appeal_scripts' );
+
+
+function human_appeal_custom_post_type(){
+		register_post_type('promasud',[
+			'public'			=> true,
+			'has_archive' => true,
+			'labels'			=> [
+				'name'			=> 'Our Gellary',
+				'singular_name' => __('Product', 'textdomain'),
+				'all_items'		=> 'All Gellary Images',
+				'add_new'		=> 'Add Gellary',
+				'add_new_item'	=> 'Add New Gellary Image',
+				'set_featured_image'		=> "Upload a Gellary Image",
+				'remove_featured_image'		=> "Upload a Gellary Image",
+
+			],
+			'supports'			=> ['title','editor','thumbnail'],
+		]);
+}
+	
+	add_action('init','human_appeal_custom_post_type');
+
 
 
 /**

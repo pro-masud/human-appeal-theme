@@ -7,8 +7,7 @@ add_shortcode( 'human_user_right', 'human_user_right' );
 function human_user_right( $atts ) {
          extract( 
            shortcode_atts([
-              'user_right_info'  => 'Let\'s fight altogether against all adversities.
-Meet our chiarman ',
+              'user_right_info'  => '',
               'sub_title'        => '',
               'btn_text'         => '',
               'btn_url'          => '',
@@ -30,7 +29,7 @@ add_action( 'vc_before_init', 'human_user_right_vc' );
 
 function human_user_right_vc() {
  vc_map([
-  "name" => __( "User Right", "human-appeal" ),
+  "name" => __( "Author Right", "human-appeal" ),
   "base" => "human_user_right",
   "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
@@ -51,13 +50,13 @@ function human_user_right_vc() {
               "type" => "textfield",
               "heading" => __( "Button Text", "human-appeal" ),
               "param_name" => "btn_text",
-              "description" => __( "About Us", "human-appeal" )
+              "description" => __( "Text", "human-appeal" )
             ],
             [
-              "type" => "textfield",
+              "type" => "etxtfield",
               "heading" => __( "Botton URL", "human-appeal" ),
               "param_name" => "btn_url",
-              "description" => __( "Botton URL", "human-appeal" )
+              "description" => __( "URL", "human-appeal" )
             ]
         ]
     ]);

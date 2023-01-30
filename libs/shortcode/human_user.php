@@ -37,7 +37,7 @@ add_action( 'vc_before_init', 'human_users_vc' );
 
 function human_users_vc() {
  vc_map([
-  "name" => __( "Human User", "human-appeal" ),
+  "name" => __( "Human Author", "human-appeal" ),
   "base" => "human_user",
   "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
@@ -45,13 +45,13 @@ function human_users_vc() {
             [
               "param_name" => "user_name",
               "type" => "textfield",
-              "heading" => __( "User Name", "human-appeal" ),
+              "heading" => __( "Author Name", "human-appeal" ),
               "description" => __( "Header Title", "human-appeal" )
             ],
             [
               "param_name" => "user_job",
               "type" => "textfield",
-              "heading" => __( "User Job Title", "human-appeal" ),
+              "heading" => __( "Author Job Title", "human-appeal" ),
               "description" => __( "Sub Title", "human-appeal" )
             ],
             [
@@ -74,7 +74,7 @@ function human_users_vc() {
             ],
             [
               "type" => "attach_image",
-              "heading" => __( "User Images", "human-appeal" ),
+              "heading" => __( "Author Images", "human-appeal" ),
               "param_name" => "user_image",
               "description" => __( "Upload Your Images", "human-appeal" )
             ]
