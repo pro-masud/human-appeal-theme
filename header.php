@@ -71,7 +71,7 @@
     <!-- Main NavBar____BAR Start-->
     <nav  class="navbar navbar-expand-lg sticky-top navbar-light py-3">
        <div class="container">
-            <a class="navbar-brand" href="#"><img src="<?php echo $redux_demo['header_logs']['url']; ?>" alt="logo"></a>
+            <a class="navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php echo $redux_demo['header_logs']['url']; ?>" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" >
                 <span class="navbar-toggler-icon"></span>
             </button>

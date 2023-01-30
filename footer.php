@@ -19,7 +19,7 @@
                     <div class="col-lg-3">
                         <div class="widget-item">
                             <div class="footer-img">
-                               <a href="#"> <img src="<?php echo $redux_demo['footer_logo']['url']; ?>" alt="flogo"></a>
+                               <a href="<?php echo site_url(); ?>"> <img src="<?php echo $redux_demo['footer_logo']['url']; ?>" alt="flogo"></a>
                             </div>
                         </div>
                     </div>
