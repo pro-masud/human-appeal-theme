@@ -18,9 +18,10 @@ function human_campaign_box( $atts ) {
 
 
 
+         ob_start();
 
-
- return " <div class='campaign-box-left'>
+ ?>
+  <div class='campaign-box-left'>
               <p>We're Near to Our</p>
               <h2>CAMPAIGN</h2>
               <h5>Raising money</h5>
@@ -54,7 +55,7 @@ function human_campaign_box( $atts ) {
                   </div>
               </div>
           </div>
- 		";
+ 	  <?php return ob_get_clean();
 }
 ?>
 

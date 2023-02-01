@@ -1,84 +1,31 @@
 <?php 
 
+	function human_appeal_custom_box(){
+
+		$project_post_box = new_cmb2_box([
+			'title'			=> __('Project Post Box','human-appeal'),
+			'id'			=> 'project_post_box',
+			'object_types'	=> ['human_appeal_gellary']
+		]);
 
 
-		function  amader_cmb2_box(){
+		$project_post_box -> add_field([
+			'name'			=> __('Image Hover Title','human-appeal'),
+			'id'			=> 'immage_hover_title',
+			'type'			=> 'text'
 
+		]);
 
-				$cmb2_box 	=  	new_cmb2_box([
-					'title'			=> 'Masud Cmb2 Box',
-					'id'			=> 'mcb',
-					'object_types'	=> ['team']
+		$project_post_box -> add_field([
+			'name'			=> __('Button Two URL','human-appeal'),
+			'id'			=> 'project_btn_two_url',
+			'type'			=> 'text'
 
+		]);
 
-				]);
+	}
 
-				$cmb2_box -> add_field([
-					'name'				=> 'User Name',
-					'id'				=> 'un',
-					'type'				=> 'text'
-
-				]);
-
-
-				$cmb2_box -> add_field([
-					'name'				=> 'Job Title',
-					'id'				=> 'jt',
-					'type'				=> 'text'
-
-				]);
-
-				$cmb2_box -> add_field([
-					'name'				=> 'Description',
-					'id'				=> 'des',
-					'type'				=> 'textarea'
-
-				]);
-
-				$cmb2_box -> add_field([
-					'name'				=> 'Images Upload',
-					'id'				=> 'img',
-					'type'				=> 'file'
-
-				]);
-
-				$cmb2_box -> add_field([
-					'name'				=> 'Facebook Link',
-					'id'				=> 'fl',
-					'type'				=> 'text'
-
-				]);
-
-				$cmb2_box -> add_field([
-					'name'				=> 'Twtter Link',
-					'id'				=> 'tl',
-					'type'				=> 'text'
-
-				]);
-
-				$cmb2_box -> add_field([
-					'name'				=> 'Linkdin Link',
-					'id'				=> 'll',
-					'type'				=> 'text'
-
-				]);
-
-
-
-
-
-
-
-
-
-		}
-
-
-		add_action('cmb2_init','amader_cmb2_box');
-
-
-
-
+	add_action('cmb2_init','human_appeal_custom_box');
 
 
 

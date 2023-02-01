@@ -49,14 +49,12 @@ function human_project_items( $atts ) {
                                   </div>
                                   <div class='col-lg-6'>
                                       <div class='model_right'>
-                                          <h2>Build a Masjid and build your palace in Jannah!{$project_model_title}</h2>
-                                          <p>A dedicated place to practice and share your faith is so important but within Muslim communities in the developing world, they don’t always have this option. A mosque is the heart of any Islamic community, and you can gift this house of Allah (SWT) to those who have no place to congregate and pray with a simple act of Sadaqah Jariyah. .
-                                              Human Appeal (Bangladesh) has actively engaged in faith based program. <br> <br> As Bangladesh is a Muslim majority country. We have already built 310+ masjid across the country in previous 12 years  understanding the significance and studying feasibility whilst maintaning the standard prescribed from the donors 
-                                              Uplift a community with your Sadaqah today, build a masjid with us!{$project_model_desc}
+                                          <h2>{$project_model_title}</h2>
+                                          <p>{$project_model_desc}
                                           </p>
                                           <div class='model_btn'>
-                                              <a class='btn' href='{$project_model_button_url_one}'>DONATE{$project_model_button_text_one}</a>
-                                              <a class='btn' href='{$project_model_button_url_two}'>MORE{$project_model_button_text_two}</a>
+                                              <a class='btn' href='{$project_model_button_url_one}'>{$project_model_button_text_one}</a>
+                                              <a class='btn' href='{$project_model_button_url_two}'>{$project_model_button_text_two}</a>
                                               <a class='btn' href='{$project_model_you_link}'><i class='fa-solid fa-play'></i></a>
                                           </div>
                                       </div>

@@ -13,9 +13,11 @@ function human_project_title( $atts ) {
          ],$atts ) );
   
 
- return "<div class='our_title'>
-            <h2>{$heading}</h2>
-            <p>{$sub_title}</p>
+ return "<div class='col'>
+            <div class='our_title'>
+              <h2>{$heading}</h2>
+              <p>{$sub_title}</p>
+            </div>
         </div>
     ";
 }

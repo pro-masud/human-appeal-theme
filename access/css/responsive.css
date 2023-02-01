@@ -7,7 +7,7 @@
         padding: 10px 20px;
     }
     .cons_btn button{
-        padding: 10px 8px;
+        padding: 8px 6px;
     }
     .campaign_donet_btn{
         margin-top: 20px;
@@ -119,7 +119,8 @@
 
     /* section  */
     .campaign-box-left{
-        width: 690px;
+        max-width: 295px;
+        width:100%;
         height: 400px;
         padding: 30px;
     }
@@ -137,7 +138,7 @@
         height: 300px;
     }
     .campaign_donet_btn button{
-        padding: 14px 60px;
+        padding: 6px 36px;
     }
     .project-img {
         width: 166px;

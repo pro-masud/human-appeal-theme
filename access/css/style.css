@@ -815,7 +815,6 @@ a.nav-link{
     margin-bottom: 40px;
 }
 .project-img{
-    width: 276px;
     height: 227px;
     position: relative;
     overflow: hidden;
@@ -1061,7 +1060,9 @@ a.nav-link{
     font-size: 14px;
     line-height: 16px;
     color: #747474;
-    text-align: center;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
 }
 .volunteer-img{
     width: 538.91px;

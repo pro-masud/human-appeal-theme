@@ -215,6 +215,7 @@ function human_appeal_scripts() {
 	wp_enqueue_script( 'human-appeal-bootstrap', get_template_directory_uri() . './access/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'human-appeal-navigation', get_template_directory_uri() . './access/js/main.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'human-appeal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'human-appeal-main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -222,26 +223,74 @@ function human_appeal_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'human_appeal_scripts' );
 
-
+/* */
 function human_appeal_custom_post_type(){
-		register_post_type('promasud',[
+	/*human appeal Project Gellary custom post type register here*/
+		register_post_type('human_appeal_gellary',[
 			'public'			=> true,
-			'has_archive' => true,
 			'labels'			=> [
-				'name'			=> 'Our Gellary',
-				'singular_name' => __('Product', 'textdomain'),
-				'all_items'		=> 'All Gellary Images',
-				'add_new'		=> 'Add Gellary',
-				'add_new_item'	=> 'Add New Gellary Image',
-				'set_featured_image'		=> "Upload a Gellary Image",
-				'remove_featured_image'		=> "Upload a Gellary Image",
-
+				'name'			=> 'Project Post',
+				'all_items'		=> 'All Project Post',
+				'add_new'		=> 'Add New Post',
+				'add_new_item'	=> 'Add New Post',
+				'set_featured_image'		=> 'Upload a Project Image',
+				'remove_featured_image'		=> 'Remove a Project Image',
 			],
 			'supports'			=> ['title','editor','thumbnail'],
+			'menu_icon'			=> 'dashicons-images-alt',
 		]);
-}
+
+
+		/*human appleal gellary image Catagory register taxnonoy here */	
+		register_taxonomy('human_gellary_cats','human_appeal_gellary',[
+				'public'		=> true,
+				'hierarchical'	=> true,
+		]);
+
+		/*human appleal gellary image Tags register taxnonoy here */	
+		register_taxonomy('human_gellary_tags','human_appeal_gellary',[
+				'public'		=> true,
+		]);
+
+
+	}
 	
-	add_action('init','human_appeal_custom_post_type');
+	add_action('init','human_appeal_custom_post_type', 2, 10);
+
+	function human_appeal_our_project_post(){
+
+		/*human appeal Our Project custom post type register here*/
+		register_post_type('human_our_project',[
+			'public'			=> true,
+			'labels'			=> [
+				'name'			=> 'Our Project',
+				'all_items'		=> 'All Projects',
+				'add_new'		=> 'Add New Project',
+				'add_new_item'	=> 'Add New Project',
+				'set_featured_image'		=> 'Upload a Project Image',
+				'remove_featured_image'		=> 'Remove a Project Image',
+			],
+			'supports'			=> ['title','editor','thumbnail'],
+			'menu_icon'			=> 'dashicons-networking',
+		]);
+
+		/*human appleal gellary image Catagory register taxnonoy here */	
+		register_taxonomy('human_gellary_cats','human_our_project',[
+				'public'		=> true,
+				'hierarchical'	=> true,
+		]);
+
+		/*human appleal gellary image Tags register taxnonoy here */	
+		register_taxonomy('human_gellary_tags','human_our_project',[
+				'public'		=> true,
+		]);
+
+		
+	}
+
+
+	add_action('init','human_appeal_our_project_post', 3, 13);
+
 
 
 
@@ -274,21 +323,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 /* bootstrap header main menu li a class adding this action here now*/
-	function add_class_li($classes, $item, $args) {
-	    if (isset($args->li_class)) {
-	        $classes[] = $args->li_class;
-	    }
-	    if (isset($args->a_class)) {
-	        $classes[] = $args->a_class;
-	    }
-	    if (isset($args->active_class) && in_array('current-menu_item', $classes)) {
-	        $classes[] = $args->active_class;
-	    }
-	    return $classes;
-	}
-	add_filter('nav_menu_css_class', 'add_class_li', 10, 3);
+function add_class_li($classes, $item, $args) {
+    if (isset($args->li_class)) {
+        $classes[] = $args->li_class;
+    }
+    if (isset($args->a_class)) {
+        $classes[] = $args->a_class;
+    }
+    if (isset($args->active_class) && in_array('current-menu_item', $classes)) {
+        $classes[] = $args->active_class;
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_class_li', 10, 3);
 
 
+
+
+
+/* human appeal walker submenu link here now*/
+include "human_appeal_walker_submenu.php";
 
 
 
@@ -306,6 +360,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	/* TGM Framework includeing now */
 	include_once"libs/tgm/example.php";
 
+	/* TGM Framework includeing now */
+	include_once"libs/cmb/init.php";
+	include_once"libs/cmb/config.php";
+
 
 
 	/* shortcode include now*/
@@ -314,6 +372,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include_once"libs/shortcode/human_emergency_box.php";
 	include_once"libs/shortcode/human_user.php";
 	include_once"libs/shortcode/human_right.php";
+	include_once"libs/shortcode/human_right_two.php";
 	include_once"libs/shortcode/human_project_title.php";
 	include_once"libs/shortcode/human_project_items.php";
 	include_once"libs/shortcode/human_donete_support.php";
@@ -321,4 +380,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include_once"libs/shortcode/human_campaign_box.php";
 	include_once"libs/shortcode/human_login_box.php";
 	include_once"libs/shortcode/human_contact_us.php";
-
+	include_once"libs/shortcode/human_project_post.php";
+	include_once"libs/shortcode/human_project_post_all.php";
+	include_once"libs/shortcode/human_our_project.php";

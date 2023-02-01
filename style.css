@@ -1068,3 +1068,10 @@ a:visited{
 .top-info{
 	margin-top: -3px !important;
 }
+.post_h{
+	height: 300px !important;
+}
+
+.campaign-box-left{
+	width: unset !important;
+}

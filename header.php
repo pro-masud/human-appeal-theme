@@ -85,7 +85,8 @@
             		'li_class' 			=> 'nav-item',
                     'a_class' 			=> 'nav-link',
                     'active_class'		=> 'active',
-                    'fallback_cb'		=> 'null_menu'
+                    'fallback_cb'		=> 'null_menu',
+                    'walker'                 => new human_appeal_walker_submenu(),
             	]) ?>
                 <?php if( $redux_demo['hea_donete'] ): ?>
                 <form class="form-inline top-btn  ms-auto">

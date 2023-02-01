@@ -13,9 +13,10 @@ function human_contact_us( $atts ) {
          ],$atts ) );
   
 
- return " <div class='contact-log'>
-            <h1>{$contact_title}</h1>
-            <p>{$contact_dsc}</p>
+ ?>
+     <div class='contact-log'>
+            <h1><?php echo $contact_title; ?></h1>
+            <p><?php echo $contact_dsc; ?></p>
             <div class='log-btn'>
                 <input type='text' placeholder='First name*''>
                 <input type='text' placeholder='Your email address*'>
@@ -25,7 +26,8 @@ function human_contact_us( $atts ) {
             <textarea placeholder='Message'></textarea>
             <input type='submit' value='Sent'>
         </div>
- 		";
+
+ 		<?php
 }
 
 ?>

@@ -15,27 +15,28 @@ function human_login_box( $atts ) {
         $googleImg = get_template_directory_uri()."/access/images/logo/g.png";
         $facebookImg = get_template_directory_uri()."/access/images/logo/f.png";
 
- return " <div class='login-boxs'>
+
+  return" <div class='login-boxs'>
               <h3>{$box_name}</h3>
               <div class='openwidth'>
                   <button><img src='{$googleImg}' alt='g'>Sign in with google</button>
                   <button><img src='{$facebookImg}' alt='g'>Sign in with Facebook</button>
-                  <a href='#''>Or sign in with email</a>
+                  <a href='#'>Or sign in with email</a>
               </div>
               <div class='login_box'>
                   <label for='email'>Email*</label>
                   <input type='text' placeholder='mail@website.com'>
                   <label for='email'>Password</label>
-                  <input type='password*'' placeholder='Min. 8 Character'>
+                  <input type='password*' placeholder='Min. 8 Character'>
                   <div class='pass_for'>
                       <label for='checkbox'> <input id='checkbox' type='checkbox'>Remember me</label>
-                      <a href='#''>Forget Password?</a>
+                      <a href='#'>Forget Password?</a>
                   </div>
                   <input type='submit'>
-                  <a href='#'d'>New registration</a>
+                  <a href='#'>New registration</a>
               </div>
           </div>
- 		";
+ 	    ";
 }
 ?>
 
