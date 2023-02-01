@@ -7,8 +7,8 @@ add_shortcode( 'human_our_project', 'human_our_project' );
 function human_our_project( $atts ) {
          extract( 
            shortcode_atts([
-              'heading'          => '',
-              'sub_title'        => '',
+              'see_more_text'              => '',
+              'see_more_btn_link'          => '',
 
          ],$atts ) );
   
@@ -32,6 +32,11 @@ function human_our_project( $atts ) {
                           </div>
                       </div>
                   <?php endwhile; ?>
+                  <div class="col-lg-12">
+                     <div class="onproject_btn">
+                          <a href="<?php echo esc_url($see_more_btn_link); ?>"><?php echo $see_more_text; ?><i class="fa-solid fa-angles-right"></i></a>
+                     </div>
+                </div>
               </div>
 
          <?php
@@ -51,17 +56,17 @@ function human_our_project_vc() {
   "category" => __( "Human Appleal", "human-appeal"),
   "params" =>[
             [
-              "param_name" => "heading",
+              "param_name" => "see_more_text",
               "type" => "textfield",
-              "heading" => __( "Project Title", "human-appeal" ),
-              "description" => __( "Title", "human-appeal" )
+              "heading" => __( "Project Button Text", "human-appeal" ),
+              "description" => __( "Text", "human-appeal" )
             ],
             [
-              "param_name" => "sub_title",
-              "type" => "textarea",
-              "heading" => __( "Project Sub Title", "human-appeal" ),
-              "description" => __( "Sub Title", "human-appeal" )
-            ]
+              "param_name" => "see_more_btn_link",
+              "type" => "textfield",
+              "heading" => __( "Project All Button Links", "human-appeal" ),
+              "description" => __( "URL", "human-appeal" )
+            ],
         ]
     ]);
 }

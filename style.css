@@ -532,7 +532,7 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
+/*a {
 	color: #4169e1;
 }
 
@@ -554,7 +554,7 @@ a:hover,
 a:active {
 	outline: 0;
 }
-
+*/
 /* Forms
 --------------------------------------------- */
 /*button,
@@ -1074,4 +1074,14 @@ a:visited{
 
 .campaign-box-left{
 	width: unset !important;
+}
+
+.onproject_btn a{
+	font-family: 'Maven Pro';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: #0066A3;
 }

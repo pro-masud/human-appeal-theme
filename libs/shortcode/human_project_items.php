@@ -25,13 +25,14 @@ function human_project_items( $atts ) {
          $project_img_one = wp_get_attachment_url($project_img);
          $project_models_img = wp_get_attachment_url($project_model_img);
   
-
- return "<div class='modal_item'>
-              <div class='our_pro' style='background-color: {$project_bg};'>
+         ob_start();
+ ?>
+ <div class='modal_item'>
+              <div class='our_pro' style='background-color: <?php echo $project_bg; ?>'>
                   <button type='hidden' class='btn' data-bs-toggle='modal' data-bs-target='#ourpro'>
-                      <img src='{$project_img_one}' alt='pro1'>
-                      <p>{$project_title}</p>
-                      <a href='#''><i class='fa-solid fa-arrow-right-long'></i></a>
+                      <img src='<?php echo $project_img_one; ?>' alt='pro1'>
+                      <p><?php echo $project_title; ?></p>
+                      <a href='#'><i class='fa-solid fa-arrow-right-long'></i></a>
                   </button>
               </div>
               <div class='modal fade ourproject_model' id='ourpro'>
@@ -44,18 +45,17 @@ function human_project_items( $atts ) {
                               <div class='row ourpro_modal'>
                                   <div class='col-lg-6'>
                                      <div class='model_left'>
-                                          <img src='{$project_models_img}' alt=''>
+                                          <img src='<?php echo $project_models_img; ?>' alt=''>
                                      </div>
                                   </div>
                                   <div class='col-lg-6'>
                                       <div class='model_right'>
-                                          <h2>{$project_model_title}</h2>
-                                          <p>{$project_model_desc}
-                                          </p>
+                                          <h2><?php echo $project_model_title; ?></h2>
+                                          <p><?php echo $project_model_desc; ?></p>
                                           <div class='model_btn'>
-                                              <a class='btn' href='{$project_model_button_url_one}'>{$project_model_button_text_one}</a>
-                                              <a class='btn' href='{$project_model_button_url_two}'>{$project_model_button_text_two}</a>
-                                              <a class='btn' href='{$project_model_you_link}'><i class='fa-solid fa-play'></i></a>
+                                              <a class='btn' href='<?php echo esc_url($project_model_button_url_one); ?>'><?php echo $project_model_button_text_one; ?></a>
+                                              <a class='btn' href='<?php echo esc_url($project_model_button_url_two); ?>'><?php echo $project_model_button_text_two; ?></a>
+                                              <a class='btn' href='<?php echo esc_url($project_model_you_link); ?>'><i class='fa-solid fa-play'></i></a>
                                           </div>
                                       </div>
                                   </div>
@@ -65,7 +65,8 @@ function human_project_items( $atts ) {
                   </div>
               </div>
           </div>
- 		";
+ 	<?php 
+    return ob_get_clean();
 }
 ?>
 
@@ -74,7 +75,7 @@ add_action( 'vc_before_init', 'human_project_items_vc' );
 
 function human_project_items_vc() {
  vc_map([
-  "name" => __( "Project Item", "human-appeal" ),
+  "name" => __( "Project Model", "human-appeal" ),
   "base" => "human_project_items",
   "icon"    => get_template_directory_uri(). '/access/images/logo/logo.png',
   "category" => __( "Human Appleal", "human-appeal"),
