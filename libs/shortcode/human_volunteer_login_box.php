@@ -20,7 +20,6 @@ function human_volunteer_login_box( $atts ) {
                             <input type="text" placeholder="Enter Your Email">
                             <input type="text" placeholder="Address, Street, contry">
                             <div class="upload-btn">
-                                <button>Upload Images</button>
                                 <input id="f-up" type="file">
                                 <label for="f-up">Upload</label>
                             </div>                            
