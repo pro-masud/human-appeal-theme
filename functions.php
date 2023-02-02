@@ -385,3 +385,4 @@ include "human_appeal_walker_submenu.php";
 	include_once"libs/shortcode/human_our_project.php";
 	include_once"libs/shortcode/human_volunteer_login_box.php";
 	include_once"libs/shortcode/human_our_visition_box.php";
+	include_once"libs/shortcode/human_people_hab.php";
