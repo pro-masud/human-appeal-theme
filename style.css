@@ -126,3 +126,13 @@ html {
 	text-align: center;
 	color: #0066A3;
 }
+
+.dropdown-item.active, .dropdown-item:active{
+	background-color: #FFCB21 !important;
+	color:#434343;
+}
+
+.hader_nav ul li > a:hover{
+	background: rgba(255, 235, 170, 0.6);
+	border-radius: 10px;
+}
